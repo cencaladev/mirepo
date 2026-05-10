@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagina de JavoPelu</title>
+
+  <style>
+
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #f2f2f2;
+      margin-top: 50px;
+    }
+
+    button {
+      background: blue;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: darkblue;
+    }
+
+  </style>
+  
+</head>
+<body>
+
+    <h2>Calcular Promedio</h2>
+
+    <button onclick="calcularPromedio()">Calcular Promedio</button>
+
+  <script>
+    function calcularPromedio() {
+    
+    let nota1 = parseFloat(prompt("Ingrese la Nota 1"));
+    let nota2 = parseFloat(prompt("Ingrese la Nota 2"));
+    let nota3 = parseFloat(prompt("Ingrese la Nota 3"));
+    
+    let promedio = (nota1 + nota2 + nota3) / 3;
+
+
+    alert("Su promedio es: " + promedio);
+    }
+
+  </script>
+
+
+<button onclick="saludar1()">click 1</button>
+
+<script>
+  function saludar1() {
+    alert("Ahora en el click 2");
+  }
+</script>
+
+<button onclick="saludar2()">click 2</button>
+
+<script>
+  function saludar2() {
+    alert("Ahora en el click 3");
+  }
+</script>
+
+<button onclick="saludar3()">click 3</button>
+
+<script>
+  function saludar3() {
+    alert("Ahora en el click 1");
+  }
+</script>
+
+</body>
+</html>
