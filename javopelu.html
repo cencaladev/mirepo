@@ -2,79 +2,81 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Pagina de JavoPelu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Primera Página</title>
 
   <style>
-
-    body {
-      font-family: Arial;
+    body{
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
       text-align: center;
-      background: #f2f2f2;
-      margin-top: 50px;
+      margin-top: 100px;
     }
 
-    button {
-      background: blue;
-      color: white;
+    h1{
+      color: #333;
+    }
+
+    button{
+      padding: 15px 25px;
+      font-size: 18px;
       border: none;
-      padding: 10px 20px;
-      margin: 10px;
-      border-radius: 5px;
+      border-radius: 10px;
       cursor: pointer;
+      margin: 10px;
+      transition: 0.3s;
     }
 
-    button:hover {
-      background: darkblue;
+    .si{
+      background-color: #198754;
+      color: white;
     }
 
+    .no{
+      background-color: #dc3545;
+      color: white;
+      position: absolute;
+    }
+
+    button:hover{
+      transform: scale(1.1);
+    }
   </style>
-  
 </head>
+
 <body>
 
-    <h2>Calcular Promedio</h2>
+  <h1>Hola, mi nombre es JavoPelu y queria hacer una pregunta: ¿El profesor va a poner 5.0? 😂</h1>
 
-    <button onclick="calcularPromedio()">Calcular Promedio</button>
+  <button class="si" onclick="feliz()">
+    Sí 😎
+  </button>
+
+  <button class="no" id="botonNo" onmouseover="moverBoton()">
+    No 😅
+  </button>
 
   <script>
-    function calcularPromedio() {
-    
-    let nota1 = parseFloat(prompt("Ingrese la Nota 1"));
-    let nota2 = parseFloat(prompt("Ingrese la Nota 2"));
-    let nota3 = parseFloat(prompt("Ingrese la Nota 3"));
-    
-    let promedio = (nota1 + nota2 + nota3) / 3;
 
+    function feliz(){
+      alert("¡5 para todos en clase! 😂");
+    }
 
-    alert("Su promedio es: " + promedio);
+    function moverBoton(){
+
+      let boton = document.getElementById("botonNo");
+
+      let ancho = window.innerWidth - 150;
+      let alto = window.innerHeight - 150;
+
+      let x = Math.random() * ancho;
+      let y = Math.random() * alto;
+
+      boton.style.left = x + "px";
+      boton.style.top = y + "px";
     }
 
   </script>
-
-
-<button onclick="saludar1()">click 1</button>
-
-<script>
-  function saludar1() {
-    alert("Ahora en el click 2");
-  }
-</script>
-
-<button onclick="saludar2()">click 2</button>
-
-<script>
-  function saludar2() {
-    alert("Ahora en el click 3");
-  }
-</script>
-
-<button onclick="saludar3()">click 3</button>
-
-<script>
-  function saludar3() {
-    alert("Ahora en el click 1");
-  }
-</script>
 
 </body>
 </html>
