@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Primera Página</title>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    h1{
+      color: #333;
+    }
+
+    button{
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+      transition: 0.3s;
+    }
+
+    .si{
+      background-color: #198754;
+      color: white;
+    }
+
+    .no{
+      background-color: #dc3545;
+      color: white;
+      position: absolute;
+    }
+
+    button:hover{
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Hola, mi nombre es JavoPelu y queria hacer una pregunta: ¿El profesor va a poner 5.0? 😂</h1>
+
+  <button class="si" onclick="feliz()">
+    Sí 😎
+  </button>
+
+  <button class="no" id="botonNo" onmouseover="moverBoton()">
+    No 😅
+  </button>
+
+  <script>
+
+    function feliz(){
+      alert("¡5 para todos en clase! 😂");
+    }
+
+    function moverBoton(){
+
+      let boton = document.getElementById("botonNo");
+
+      let ancho = window.innerWidth - 150;
+      let alto = window.innerHeight - 150;
+
+      let x = Math.random() * ancho;
+      let y = Math.random() * alto;
+
+      boton.style.left = x + "px";
+      boton.style.top = y + "px";
+    }
+
+  </script>
+
+</body>
+</html>
